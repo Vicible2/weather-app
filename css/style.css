@@ -23,6 +23,7 @@ body {
   margin: 2px;
   padding: 2px;
   background-color: lightgreen;
+  font-family: sans-serif;
 }
 
 body .container {
@@ -47,7 +48,6 @@ body .container .weatherform {
 
 body .container .weatherform h1 {
   margin-bottom: 25px;
-  font-family: sans-serif;
   text-transform: uppercase;
 }
 

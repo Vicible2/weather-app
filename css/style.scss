@@ -12,6 +12,7 @@ body {
     margin: 2px;
     padding: 2px;
     background-color: lightgreen;
+    font-family: sans-serif;
     .container {
         padding: 40px;
         background-color: red;
@@ -23,7 +24,7 @@ body {
            text-align: center;
             h1 {
                 margin-bottom: 25px;
-                font-family: sans-serif;
+               
                 text-transform: uppercase;
             }
         }
