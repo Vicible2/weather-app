@@ -51,6 +51,23 @@ body .container .weatherform h1 {
   text-transform: uppercase;
 }
 
+body .container .weatherform .city {
+  width: 16vw;
+  height: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+body .container .weatherform .city:focus {
+  outline: none;
+}
+
+body .container .weatherform .submitButton {
+  height: 30px;
+  border-radius: 4px;
+  padding: 5px;
+}
+
 body .container .results {
   margin-top: 25px;
 }

@@ -27,6 +27,21 @@ body {
                
                 text-transform: uppercase;
             }
+            .city {
+                width: 16vw;
+                height: 30px;
+                font-weight: bold;
+                font-style: italic;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .submitButton {
+                height: 30px;
+                border-radius: 4px;
+                padding: 5px;
+            
+            }
         }
         .results {
             margin-top: 25px;
