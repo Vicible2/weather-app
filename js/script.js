@@ -1,3 +1,5 @@
+const button = document.querySelector('#run');
+
 const weatherDayOne = document.querySelector('.weatherDayOne');
 const weatherDayTwo = document.querySelector('.weatherDayTwo');
 const weatherDayThree = document.querySelector('.weatherDayThree');
@@ -7,7 +9,7 @@ const weatherDayFive = document.querySelector('.weatherDayFive');
 const city = document.querySelector('.city');
 
 
-document.querySelector('#run').addEventListener('click', () => {
+button.addEventListener('click', () => {
 
 
 
