@@ -23,8 +23,12 @@ button.addEventListener('click', () => {
     };
 
     fetch(`${api.base}weather?q=${city.value}&units=metric&appid=${api.key}`)
-        .then(weather => weather.json())
-        .then(data => console.log(data));
+        .then(weather => {
+            return weather.json()
+        })
+        .then(data => console.log(data))
+
+
 
 
 
