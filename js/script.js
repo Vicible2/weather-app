@@ -14,6 +14,11 @@ const api = {
     base: "http://api.openweathermap.org/data/2.5/",
 }
 
+const apiImg = {
+    key: "O0AyJhfn9YR67YQQX9d9FbCUAZ3YbjshWKlAeSD-4d4",
+    base: "https://api.unsplash.com/",
+}
+
 button.addEventListener('click', () => {
 
     console.log(city.value);
@@ -28,8 +33,12 @@ button.addEventListener('click', () => {
         })
         .then(data => console.log(data))
 
+        weatherDayOne.innerHTML = data.main.temp;
 
-
-
+    fetch(`${apiImg.base}search/photos/?query=${city.value}&client_id=${apiImg.key}`)
+        .then(background => {
+            return background.json()
+        })
+        .then(data => console.log(data));
 
 });
