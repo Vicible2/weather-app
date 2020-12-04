@@ -31,14 +31,29 @@ button.addEventListener('click', () => {
         .then(weather => {
             return weather.json()
         })
-        .then(data => console.log(data))
+        .then(data => {
+            weatherDayOne.innerHTML = data.main.temp;
 
-        weatherDayOne.innerHTML = data.main.temp;
+            return console.log(data)
+        })
+        
+
+        /*
+
+        regular weather call -> take lat/long coordinates. Insert as variables in https://openweathermap.org/api/one-call-api .
+        add &units=metric for Celcius -> select value of daily.temp.day (avg temp during the day)
+
+        */
 
     fetch(`${apiImg.base}search/photos/?query=${city.value}&client_id=${apiImg.key}`)
         .then(background => {
             return background.json()
         })
-        .then(data => console.log(data));
+        .then(data => {
+            let randomSelector = Math.floor(Math.random () * 5);
+            let imageUrl = data["results"][randomSelector]["urls"]["full"]
+            document.body.style.backgroundImage = `url(${imageUrl})`;
+            document.body.style.backgroundSize = "cover";
+        });
 
 });

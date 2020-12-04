@@ -28,7 +28,7 @@ body {
 
 body .container {
   padding: 40px;
-  background-color: red;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,6 +48,10 @@ body .container .weatherform {
 
 body .container .weatherform h1 {
   margin-bottom: 25px;
+  color: #fff;
+  text-shadow: 4px 4px 10px black;
+  font-weight: bold;
+  font-size: 40px;
   text-transform: uppercase;
 }
 
@@ -71,6 +75,8 @@ body .container .weatherform .submitButton {
 
 body .container .results {
   margin-top: 25px;
+  color: #fff;
+  text-shadow: 2px 2px 3px black;
 }
 
 body .container .results p {
