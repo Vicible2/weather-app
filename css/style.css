@@ -82,4 +82,9 @@ body .container .results {
 body .container .results p {
   padding: 5px 0px;
 }
+
+body .container .results span {
+  font-weight: bolder;
+  font-size: 25px;
+}
 /*# sourceMappingURL=style.css.map */

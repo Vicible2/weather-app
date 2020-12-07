@@ -59,6 +59,7 @@ button.addEventListener('click', () => {
                 dailyTemps = dailyData.daily;
                 console.log(dailyTemps);
                 tempSelect();
+                tempColor();
                 return console.log(dailyData);
             })
     }
@@ -69,6 +70,16 @@ button.addEventListener('click', () => {
        weatherDayFour.innerHTML = dailyTemps[4]["temp"]["day"];
        weatherDayFive.innerHTML = dailyTemps[5]["temp"]["day"];
 
+    }
+// function to change color based on temp
+    function tempColor(){
+        if (dailyTemps[1]["temp"]["day"] < 2) {
+            weatherDayOne.style.color = "#b0fff3";
+        } else if (dailyTemps[1]["temp"]["day"] > 2 && dailyTemps[1]["temp"]["day"] < 4){
+            weatherDayOne.style.color = "#fcf592";
+        } else {
+            weatherDayOne.style.color = "#ffb43b";
+        }
     }
     /*
     
@@ -89,5 +100,7 @@ button.addEventListener('click', () => {
             document.body.style.backgroundImage = `url(${imageUrl})`;
             document.body.style.backgroundSize = "cover";
         });
+
+    
 
 });
