@@ -84,7 +84,7 @@ button.addEventListener('click', () => {
 
 
         //color select per day
-        if (day1 >= -2 && day1 < 2) {
+        if (day1 >= -10 && day1 < 2) {
             weatherDayOne.style.color = "#7de9fa";
         } else if (day1 >= 2 && day1 < 4){
             weatherDayOne.style.color = "#bafffa";

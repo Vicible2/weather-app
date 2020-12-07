@@ -70,8 +70,30 @@ body .container .weatherform .city:focus {
 
 body .container .weatherform .submitButton {
   height: 30px;
-  border-radius: 4px;
-  padding: 5px;
+  background-color: white;
+  color: lightgray;
+  text-shadow: 1px 1px 1px black;
+  border: 1px solid darkslategray;
+  border-left: 1px solid lightgrey;
+  border-radius: 0px 15px 0px 0px;
+  padding: 5px 10px;
+  margin-left: -5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+body .container .weatherform .submitButton:hover {
+  color: darkslategray;
+}
+
+body .container .weatherform .submitButton:active {
+  outline: none;
+  border: 2px groove darkslateblue;
+}
+
+body .container .weatherform .submitButton:focus {
+  outline: none;
 }
 
 body .container .results {
