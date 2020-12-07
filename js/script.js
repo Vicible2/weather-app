@@ -73,13 +73,29 @@ button.addEventListener('click', () => {
     }
 // function to change color based on temp
     function tempColor(){
-        if (dailyTemps[1]["temp"]["day"] < 2) {
-            weatherDayOne.style.color = "#b0fff3";
-        } else if (dailyTemps[1]["temp"]["day"] > 2 && dailyTemps[1]["temp"]["day"] < 4){
-            weatherDayOne.style.color = "#fcf592";
+
+        //daily temp variables.
+
+        let day1 = dailyTemps[1]["temp"]["day"];
+        let day2 = dailyTemps[2]["temp"]["day"];
+        let day3 = dailyTemps[3]["temp"]["day"];
+        let day4 = dailyTemps[4]["temp"]["day"];
+        let day5 = dailyTemps[5]["temp"]["day"];
+
+
+        //color select per day
+        if (day1 >= -2 && day1 < 2) {
+            weatherDayOne.style.color = "#7de9fa";
+        } else if (day1 >= 2 && day1 < 4){
+            weatherDayOne.style.color = "#bafffa";
+        } else if (day1 >= 4 && day1 < 12){
+            weatherDayOne.style.color = "#fffb80";
         } else {
-            weatherDayOne.style.color = "#ffb43b";
+            weatherDayOne.style.color = "#ffc559";
         }
+
+
+
     }
     /*
     
