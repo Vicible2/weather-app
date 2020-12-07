@@ -64,11 +64,11 @@ button.addEventListener('click', () => {
             })
     }
     function tempSelect() {
-       weatherDayOne.innerHTML = dailyTemps[1]["temp"]["day"];
-       weatherDayTwo.innerHTML = dailyTemps[2]["temp"]["day"];
-       weatherDayThree.innerHTML = dailyTemps[3]["temp"]["day"];
-       weatherDayFour.innerHTML = dailyTemps[4]["temp"]["day"];
-       weatherDayFive.innerHTML = dailyTemps[5]["temp"]["day"];
+       weatherDayOne.innerHTML = `${dailyTemps[1]["temp"]["day"]}°C`;
+       weatherDayTwo.innerHTML = `${dailyTemps[2]["temp"]["day"]}°C`;
+       weatherDayThree.innerHTML = `${dailyTemps[3]["temp"]["day"]}°C`;
+       weatherDayFour.innerHTML = `${dailyTemps[4]["temp"]["day"]}°C`;
+       weatherDayFive.innerHTML = `${dailyTemps[5]["temp"]["day"]}°C`;
 
     }
 // function to change color based on temp
@@ -82,8 +82,6 @@ button.addEventListener('click', () => {
         let day4 = dailyTemps[4]["temp"]["day"];
         let day5 = dailyTemps[5]["temp"]["day"];
 
-
-        //color select per day
         if (day1 >= -10 && day1 < 2) {
             weatherDayOne.style.color = "#7de9fa";
         } else if (day1 >= 2 && day1 < 4){
@@ -94,7 +92,45 @@ button.addEventListener('click', () => {
             weatherDayOne.style.color = "#ffc559";
         }
 
+        if (day2 >= -10 && day2 < 2) {
+            weatherDayTwo.style.color = "#7de9fa";
+        } else if (day2 >= 2 && day2 < 4){
+            weatherDayTwo.style.color = "#bafffa";
+        } else if (day2 >= 4 && day2 < 12){
+            weatherDayTwo.style.color = "#fffb80";
+        } else {
+            weatherDayTwo.style.color = "#ffc559";
+        }
 
+        if (day3 >= -10 && day3 < 2) {
+            weatherDayThree.style.color = "#7de9fa";
+        } else if (day3 >= 2 && day3 < 4){
+            weatherDayThree.style.color = "#bafffa";
+        } else if (day3 >= 4 && day3 < 12){
+            weatherDayThree.style.color = "#fffb80";
+        } else {
+            weatherDayThree.style.color = "#ffc559";
+        }
+
+        if (day4 >= -10 && day4 < 2) {
+            weatherDayFour.style.color = "#7de9fa";
+        } else if (day4 >= 2 && day4 < 4){
+            weatherDayFour.style.color = "#bafffa";
+        } else if (day4 >= 4 && day4 < 12){
+            weatherDayFour.style.color = "#fffb80";
+        } else {
+            weatherDayFour.style.color = "#ffc559";
+        }
+
+        if (day5 >= -10 && day5 < 2) {
+            weatherDayFive.style.color = "#7de9fa";
+        } else if (day5 >= 2 && day5 < 4){
+            weatherDayFive.style.color = "#bafffa";
+        } else if (day5 >= 4 && day5 < 12){
+            weatherDayFive.style.color = "#fffb80";
+        } else {
+            weatherDayFive.style.color = "#ffc559";
+        }
 
     }
     /*
