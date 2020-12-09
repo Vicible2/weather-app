@@ -20,13 +20,12 @@ const apiImg = {
 }
 
 //coordinates variables
-
 let coords = [];
 let dailyTemps = [];
 
 button.addEventListener('click', () => {
-
     console.log(city.value);
+
     //check if form is empty, error if true
     if (city.value.length == 0) {
         alert('Please enter a location!')
@@ -35,17 +34,14 @@ button.addEventListener('click', () => {
     //Fetch the weather of today to get Coordinates
     fetch(`${api.base}weather?q=${city.value}&units=metric&appid=${api.key}`)
         .then(weather => {
-            return weather.json()
+            return weather.json();
         })
         .then(data => {
             weatherDayOne.innerHTML = data.main.temp;
             coords = data.coord;
             getDailyTempData();
             return console.log(data);
-
         })
-
-
 
     //function to get daily forecast
     function getDailyTempData() {
@@ -69,15 +65,12 @@ button.addEventListener('click', () => {
         weatherDayThree.innerHTML = `${dailyTemps[3]["temp"]["day"]}°C`;
         weatherDayFour.innerHTML = `${dailyTemps[4]["temp"]["day"]}°C`;
         weatherDayFive.innerHTML = `${dailyTemps[5]["temp"]["day"]}°C`;
-
     }
+
     // function to change color based on temp
-
-
     function changeTempColor() {
 
         //daily temp variables.
-
         let day1 = dailyTemps[1]["temp"]["day"];
         let day2 = dailyTemps[2]["temp"]["day"];
         let day3 = dailyTemps[3]["temp"]["day"];
@@ -133,15 +126,11 @@ button.addEventListener('click', () => {
         } else {
             weatherDayFive.style.color = "#ffc559";
         }
-
     }
-    /*
-    
+    /*    
         regular weather call -> take lat/long coordinates. Insert as variables in https://openweathermap.org/api/one-call-api .
         add &units=metric for Celcius -> select value of daily.temp.day (avg temp during the day)
-
     */
-
 
     //Get random background for every city filled in form
     fetch(`${apiImg.base}search/photos/?query=${city.value}&client_id=${apiImg.key}`)
@@ -154,7 +143,4 @@ button.addEventListener('click', () => {
             document.body.style.backgroundImage = `url(${imageUrl})`;
             document.body.style.backgroundSize = "cover";
         });
-
-
-
 });
