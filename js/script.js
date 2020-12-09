@@ -48,7 +48,6 @@ button.addEventListener('click', () => {
 
 
     //function to get daily forecast
-    
     function getDailyTempData() {
         console.log(coords.lon, coords.lat);
         fetch(`${api.base}onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=minutely,hourly,alerts&units=metric&appid=${api.key}`)
@@ -59,20 +58,23 @@ button.addEventListener('click', () => {
                 dailyTemps = dailyData.daily;
                 console.log(dailyTemps);
                 tempSelect();
-                tempColor();
+                changeTempColor();
                 return console.log(dailyData);
             })
     }
+
     function tempSelect() {
-       weatherDayOne.innerHTML = `${dailyTemps[1]["temp"]["day"]}°C`;
-       weatherDayTwo.innerHTML = `${dailyTemps[2]["temp"]["day"]}°C`;
-       weatherDayThree.innerHTML = `${dailyTemps[3]["temp"]["day"]}°C`;
-       weatherDayFour.innerHTML = `${dailyTemps[4]["temp"]["day"]}°C`;
-       weatherDayFive.innerHTML = `${dailyTemps[5]["temp"]["day"]}°C`;
+        weatherDayOne.innerHTML = `${dailyTemps[1]["temp"]["day"]}°C`;
+        weatherDayTwo.innerHTML = `${dailyTemps[2]["temp"]["day"]}°C`;
+        weatherDayThree.innerHTML = `${dailyTemps[3]["temp"]["day"]}°C`;
+        weatherDayFour.innerHTML = `${dailyTemps[4]["temp"]["day"]}°C`;
+        weatherDayFive.innerHTML = `${dailyTemps[5]["temp"]["day"]}°C`;
 
     }
-// function to change color based on temp
-    function tempColor(){
+    // function to change color based on temp
+
+
+    function changeTempColor() {
 
         //daily temp variables.
 
@@ -84,9 +86,9 @@ button.addEventListener('click', () => {
 
         if (day1 >= -10 && day1 < 2) {
             weatherDayOne.style.color = "#7de9fa";
-        } else if (day1 >= 2 && day1 < 4){
+        } else if (day1 >= 2 && day1 < 4) {
             weatherDayOne.style.color = "#bafffa";
-        } else if (day1 >= 4 && day1 < 12){
+        } else if (day1 >= 4 && day1 < 12) {
             weatherDayOne.style.color = "#fffb80";
         } else {
             weatherDayOne.style.color = "#ffc559";
@@ -94,9 +96,9 @@ button.addEventListener('click', () => {
 
         if (day2 >= -10 && day2 < 2) {
             weatherDayTwo.style.color = "#7de9fa";
-        } else if (day2 >= 2 && day2 < 4){
+        } else if (day2 >= 2 && day2 < 4) {
             weatherDayTwo.style.color = "#bafffa";
-        } else if (day2 >= 4 && day2 < 12){
+        } else if (day2 >= 4 && day2 < 12) {
             weatherDayTwo.style.color = "#fffb80";
         } else {
             weatherDayTwo.style.color = "#ffc559";
@@ -104,9 +106,9 @@ button.addEventListener('click', () => {
 
         if (day3 >= -10 && day3 < 2) {
             weatherDayThree.style.color = "#7de9fa";
-        } else if (day3 >= 2 && day3 < 4){
+        } else if (day3 >= 2 && day3 < 4) {
             weatherDayThree.style.color = "#bafffa";
-        } else if (day3 >= 4 && day3 < 12){
+        } else if (day3 >= 4 && day3 < 12) {
             weatherDayThree.style.color = "#fffb80";
         } else {
             weatherDayThree.style.color = "#ffc559";
@@ -114,9 +116,9 @@ button.addEventListener('click', () => {
 
         if (day4 >= -10 && day4 < 2) {
             weatherDayFour.style.color = "#7de9fa";
-        } else if (day4 >= 2 && day4 < 4){
+        } else if (day4 >= 2 && day4 < 4) {
             weatherDayFour.style.color = "#bafffa";
-        } else if (day4 >= 4 && day4 < 12){
+        } else if (day4 >= 4 && day4 < 12) {
             weatherDayFour.style.color = "#fffb80";
         } else {
             weatherDayFour.style.color = "#ffc559";
@@ -124,9 +126,9 @@ button.addEventListener('click', () => {
 
         if (day5 >= -10 && day5 < 2) {
             weatherDayFive.style.color = "#7de9fa";
-        } else if (day5 >= 2 && day5 < 4){
+        } else if (day5 >= 2 && day5 < 4) {
             weatherDayFive.style.color = "#bafffa";
-        } else if (day5 >= 4 && day5 < 12){
+        } else if (day5 >= 4 && day5 < 12) {
             weatherDayFive.style.color = "#fffb80";
         } else {
             weatherDayFive.style.color = "#ffc559";
@@ -153,6 +155,6 @@ button.addEventListener('click', () => {
             document.body.style.backgroundSize = "cover";
         });
 
-    
+
 
 });
