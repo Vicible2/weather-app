@@ -58,8 +58,9 @@ button.addEventListener('click', () => {
                 return console.log(dailyData);
             })
     }
-
-    function tempSelect() {
+    //TODO create for loop with variables to make shorter (weatherday${var}.innerHTML...)
+    function tempSelect() { 
+        
         weatherDayOne.innerHTML = `${dailyTemps[1]["temp"]["day"]}°C`;
         weatherDayTwo.innerHTML = `${dailyTemps[2]["temp"]["day"]}°C`;
         weatherDayThree.innerHTML = `${dailyTemps[3]["temp"]["day"]}°C`;
@@ -68,6 +69,7 @@ button.addEventListener('click', () => {
     }
 
     // function to change color based on temp
+    //TODO create for loop / array funcion to shorten changeTempColor notation
     function changeTempColor() {
 
         //daily temp variables.
